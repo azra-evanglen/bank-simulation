@@ -1,24 +1,26 @@
-#CÜZDAN SİMÜLASYONU
-mevcut_para =1000
+#BANK SIMULATION
+current_balance = 1000
 while True:
+    
+    print("1- check balance")
+    print("2- deposit money")
+    print("3- get money")
+    print("4- exit")
+    select = input("Enter an option.")
 
-    print("1-bakiye sorgula")
-    print("2-para çek")
-    print("3-para yatır")
-    print("4-çıkış")
-    secim = input("bir seçenek girin.")
+    if select == "1":
+        print(f"Checking balance...\nCurrent balance = {current_balance} TL")
 
-    if secim == "1":
-        print(f"bakiye sorgulanıyor...\nMevcut bakiye = {mevcut_para} TL")
-        
-    elif secim == "2":
-        cekim_miktari = input("çekmek istediğiniz para miktarını girin: ")
-        print(f"çekilen tutar: {cekim_miktari}")
-    elif secim == "3":
-        yatan_para = int(input("bankaya yatırmak  para miktarını girin: "))
-        print(f"yatırılan para miktarı: {yatan_para}")
-    elif secim == "4":
-        print("çıkış yapılıyo...")
+    elif select == "2":
+        deposit = input("enter deposit amount: ")
+        print(f"deposited amount: {deposit}")
+
+    elif select == "3":
+        withdrawal_amount = input("enter the amount you want to withdraw: ")
+        print(f"withdrawn amount: {withdrawal_amount}")
+
+    elif select == "4":
+        print("exiting...")
         break
 
 
