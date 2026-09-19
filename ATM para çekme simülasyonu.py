@@ -1,10 +1,11 @@
 #BANK SIMULATION
 current_balance = 1000
+
 while True:
     print("1 - CURRENT BALANCE")
-    print("2 - DEPOSIT MONEY")
-    print("3 - WITHDRAW MONEY")
-    print("4 - EXIT")
+    print("2 - DEPOSİT MONEY")
+    print("3 - WİTHDRAW MONEY")
+    print("4 - EXİT")
 
     select = input("Enter an option: ")
 
@@ -19,12 +20,16 @@ while True:
 
     elif select == "3":
         withdraw_money = int(input("enter the amount: "))
-        current_balance -= withdraw_money
-        print(f"withdraw amount {withdraw_money} TL")
+        if withdraw_money <= current_balance:
+           current_balance -= withdraw_money
+           print(f"withdraw amount {withdraw_money} TL\n remaining amount {current_balance}")
+        else:
+           print("This amount exceeds the current balance.")
+        
 
     elif select == "4":
-        print("EXITING SYSTEM...\nTRANSACTION COMPLETED. ")
-        break
+        print("EXİTİNG SYSTEM...\nTRANSACTİON COMPLETED. ")
+        break 
 
 
     
