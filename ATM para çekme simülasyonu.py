@@ -10,7 +10,6 @@ while True:
     select = input("Enter an option: ")
 
     if select == "1":
-    
         print(f"Your current balance {current_balance} TL")
 
     elif select == "2":
@@ -26,10 +25,9 @@ while True:
         else:
            print("This amount exceeds the current balance.")
         
-
     elif select == "4":
         print("EXİTİNG SYSTEM...\nTRANSACTİON COMPLETED. ")
-        break 
+        break
 
 
     
