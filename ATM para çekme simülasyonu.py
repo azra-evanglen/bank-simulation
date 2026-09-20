@@ -1,7 +1,26 @@
 #BANK SIMULATION
+import time
 current_balance = 1000
+correct_password = 1234
+attempts = 3
 
-while True:
+while True:   #first loop
+    attempts = 3
+    while attempts > 0:
+        password = input("What is your password? ")
+        if password == correct_password:
+            print("Login successful!")
+            break
+        else:
+            attempts -= 1
+            print(f"Incorrect password. {attempts} attempts remaining.")
+    if attempts == 0:
+        print("Please wait one minute.")
+        time.sleep(60)
+    else:
+        break
+    
+while True:    #second loop
     print("1 - CURRENT BALANCE")
     print("2 - DEPOSİT MONEY")
     print("3 - WİTHDRAW MONEY")
@@ -10,6 +29,7 @@ while True:
     select = input("Enter an option: ")
 
     if select == "1":
+    
         print(f"Your current balance {current_balance} TL")
 
     elif select == "2":
@@ -25,9 +45,12 @@ while True:
         else:
            print("This amount exceeds the current balance.")
         
+
     elif select == "4":
         print("EXİTİNG SYSTEM...\nTRANSACTİON COMPLETED. ")
-        break
+        break 
+
+
 
 
     
